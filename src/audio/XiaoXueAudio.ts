@@ -12,65 +12,71 @@ export interface VoiceLine {
   tags: ('entry' | 'feed' | 'general' | 'night' | 'exit')[];
 }
 
+const resolveAudioUrl = (file: string) => {
+  const base = import.meta.env.BASE_URL || '/';
+  const prefix = base.endsWith('/') ? base : `${base}/`;
+  return `${prefix}assets/audio/${file}`;
+};
+
 // 乾淨規範的 10 首專屬 44.1kHz MP3 音檔路徑（經由原生播放器實證可 100% 順暢發聲）
 export const XIAOXUE_VOICE_TRACKS: VoiceLine[] = [
   {
     id: 'voice-01',
-    src: '/assets/audio/xiaoxue_01.mp3',
+    src: resolveAudioUrl('xiaoxue_01.mp3'),
     text: '你來啦，把外頭那些繁雜的瑣事，先留在泉水之外吧……',
     tags: ['entry', 'general'],
   },
   {
     id: 'voice-02',
-    src: '/assets/audio/xiaoxue_02.mp3',
+    src: resolveAudioUrl('xiaoxue_02.mp3'),
     text: '閉上眼，深吸一口靈泉邊的清氣……慢下來，才算是真正的修行呢。',
     tags: ['entry', 'general'],
   },
   {
     id: 'voice-03',
-    src: '/assets/audio/xiaoxue_03.mp3',
+    src: resolveAudioUrl('xiaoxue_03.mp3'),
     text: '人間紛紛擾擾，辛苦你了。這裡是我為你留的一方淨土……',
     tags: ['entry', 'general'],
   },
   {
     id: 'voice-04',
-    src: '/assets/audio/xiaoxue_04.mp3',
+    src: resolveAudioUrl('xiaoxue_04.mp3'),
     text: '你看那幾尾錦鯉，游得那樣從容……我們今日也學學牠們吧？',
     tags: ['general'],
   },
   {
     id: 'voice-05',
-    src: '/assets/audio/xiaoxue_05.mp3',
+    src: resolveAudioUrl('xiaoxue_05.mp3'),
     text: '岸邊石縫裡的小傢伙又在唱歌了……能安靜聽完一曲蟲鳴，便已是仙境了。',
     tags: ['general'],
   },
   {
     id: 'voice-06',
-    src: '/assets/audio/xiaoxue_06.mp3',
+    src: resolveAudioUrl('xiaoxue_06.mp3'),
     text: '不用急著做什麼，也不用急著去哪裡。在這靈泉畔，光陰本該用在美好事物上。',
     tags: ['general'],
   },
   {
     id: 'voice-07',
-    src: '/assets/audio/xiaoxue_07.mp3',
+    src: resolveAudioUrl('xiaoxue_07.mp3'),
     text: '瞧，一把靈米灑下去，牠們全都歡喜地圍上來了……',
     tags: ['feed'],
   },
   {
     id: 'voice-08',
-    src: '/assets/audio/xiaoxue_08.mp3',
+    src: resolveAudioUrl('xiaoxue_08.mp3'),
     text: '一指微瀾，水波就這樣一圈圈漾開了，所有焦慮與煩心都隨之散去吧……',
     tags: ['general', 'feed'],
   },
   {
     id: 'voice-09',
-    src: '/assets/audio/xiaoxue_09.mp3',
+    src: resolveAudioUrl('xiaoxue_09.mp3'),
     text: '夜深了，靈泉的風也柔了許多……小雪會一直守在這兒，祝你好夢。',
     tags: ['night'],
   },
   {
     id: 'voice-10',
-    src: '/assets/audio/xiaoxue_10.mp3',
+    src: resolveAudioUrl('xiaoxue_10.mp3'),
     text: '要回凡塵去闖蕩了嗎？記得把靈泉的這份安寧帶在身上……累了隨時回來。',
     tags: ['exit'],
   },

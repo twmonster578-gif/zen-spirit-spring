@@ -308,7 +308,7 @@ export const ZenControls: React.FC<ZenControlsProps> = ({
                   <audio
                     controls
                     preload="auto"
-                    src="/assets/audio/xiaoxue_01.mp3"
+                    src={`${import.meta.env.BASE_URL || '/'}assets/audio/xiaoxue_01.mp3`}
                     className="w-full h-8 opacity-85 hover:opacity-100 transition-opacity"
                   />
                 </div>
