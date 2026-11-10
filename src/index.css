@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Serif TC', serif, system-ui;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* 隱藏捲軸但允許捲動 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

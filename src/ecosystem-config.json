@@ -1,0 +1,107 @@
+{
+  "ecosystemLimits": {
+    "koi": {
+      "id": "koi",
+      "label": "錦鯉",
+      "category": "水生巡游",
+      "description": "紅白 · 三色 · 黃金 · 丹頂 · 水墨白",
+      "min": 0,
+      "max": 18,
+      "default": 7
+    },
+    "frog": {
+      "id": "frog",
+      "label": "青蛙",
+      "category": "兩棲跳水",
+      "description": "荷葉休憩 · 撲通跳水激起漣漪",
+      "min": 0,
+      "max": 8,
+      "default": 3
+    },
+    "grasshopper": {
+      "id": "grasshopper",
+      "label": "蚱蜢／蟋蟀",
+      "category": "陸生草木",
+      "description": "棲息上方石岸 · 振翅大自然鳴叫",
+      "min": 0,
+      "max": 6,
+      "default": 3
+    },
+    "dragonfly": {
+      "id": "dragonfly",
+      "label": "蜻蜓",
+      "category": "空中飛舞",
+      "description": "懸停荷花 · 輕盈穿梭蜻蜓點水",
+      "min": 0,
+      "max": 5,
+      "default": 2
+    },
+    "turtle": {
+      "id": "turtle",
+      "label": "水龜",
+      "category": "水底悠游",
+      "description": "池底慢游划水 · 石岸浮葉曬背",
+      "min": 0,
+      "max": 4,
+      "default": 1
+    }
+  },
+  "character": {
+    "xiaoXue": {
+      "enabledDefault": true,
+      "label": "小雪觀魚",
+      "description": "側坐石岸冥想觀魚 · 輕點可灑魚食引錦鯉聚攏",
+      "imagePath": "/src/assets/images/xiaoxue_zen_sitting_1794197606037.jpg"
+    }
+  },
+  "physicsAndBehavior": {
+    "koi": {
+      "cruiseSpeedMin": 0.38,
+      "cruiseSpeedMax": 0.78,
+      "fleeSpeed": 2.2,
+      "minLength": 48,
+      "maxLength": 72,
+      "turnSmoothness": 0.022,
+      "waypointReachDistance": 45,
+      "waypointMinWaitFrames": 60,
+      "waypointMaxWaitFrames": 160
+    },
+    "frog": {
+      "jumpHeight": 36,
+      "jumpDurationFrames": 42,
+      "restDurationMinFrames": 120,
+      "restDurationMaxFrames": 260,
+      "waterJumpChance": 0.58,
+      "swimSpeed": 0.85
+    },
+    "grasshopper": {
+      "chirpIntervalMinFrames": 160,
+      "chirpIntervalMaxFrames": 380,
+      "hopCooldownMinFrames": 180,
+      "hopCooldownMaxFrames": 360,
+      "hopDistanceMin": 20,
+      "hopDistanceMax": 42
+    },
+    "dragonfly": {
+      "cruiseSpeed": 1.4,
+      "dashSpeed": 3.0,
+      "hoverFramesMin": 80,
+      "hoverFramesMax": 180,
+      "dipWaterChance": 0.45
+    },
+    "turtle": {
+      "swimSpeed": 0.28,
+      "crawlSpeed": 0.18,
+      "size": 22,
+      "baskDurationMinFrames": 200,
+      "baskDurationMaxFrames": 450
+    }
+  },
+  "environment": {
+    "shoreRatio": 0.22,
+    "rippleMaxRadius": 58,
+    "rippleFadeRate": 0.965,
+    "defaultVolume": 0.6,
+    "defaultMood": "day"
+  }
+}

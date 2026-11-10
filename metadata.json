@@ -1,0 +1,6 @@
+{
+  "name": "靜心靈泉 - 日式庭園觀賞與生態模擬",
+  "description": "9:16 水墨禪意日式觀賞庭園。沉浸式靈泉池塘生態，錦鯉悠游、青蛙躍水、蟋蟀蟲鳴與水紋物理模擬。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
