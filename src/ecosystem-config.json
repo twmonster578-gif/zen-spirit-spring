@@ -51,7 +51,7 @@
       "enabledDefault": true,
       "label": "小雪觀魚",
       "description": "側坐石岸冥想觀魚 · 輕點可灑魚食引錦鯉聚攏",
-      "imagePath": "/src/assets/images/xiaoxue_zen_sitting_1794197606037.jpg"
+      "imagePath": "assets/images/xiaoxue_zen_sitting.jpg"
     }
   },
   "physicsAndBehavior": {

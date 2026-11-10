@@ -20,6 +20,7 @@ import {
 import { zenAudio } from '../audio/ZenAudio';
 import { xiaoXueVoice } from '../audio/XiaoXueAudio';
 import ecosystemConfig from '../ecosystem-config.json';
+import xiaoXueSittingAsset from '../assets/images/xiaoxue_zen_sitting_1794197606037.jpg';
 
 export interface ZenCanvasHandle {
   triggerFeed: () => void;
@@ -67,10 +68,21 @@ export const ZenCanvas = forwardRef<ZenCanvasHandle, ZenCanvasProps>(({ config, 
   // 載入小雪水墨坐姿形象
   useEffect(() => {
     const img = new Image();
-    img.src = ecosystemConfig.character.xiaoXue.imagePath;
+    img.src = xiaoXueSittingAsset;
     img.onload = () => {
       xiaoXueImgRef.current = img;
       setIsImgLoaded(true);
+    };
+    img.onerror = () => {
+      console.warn('Bundled image failed, attempting public fallback');
+      const fallback = new Image();
+      const base = import.meta.env.BASE_URL || '/';
+      const cleanBase = base.endsWith('/') ? base : `${base}/`;
+      fallback.src = `${cleanBase}assets/images/xiaoxue_zen_sitting.jpg`;
+      fallback.onload = () => {
+        xiaoXueImgRef.current = fallback;
+        setIsImgLoaded(true);
+      };
     };
   }, []);
 
